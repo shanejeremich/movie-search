@@ -11,4 +11,3 @@ We need a webpage that can search OMDB for movies, and allow the user to save th
 This is a submission for the following challenge: [Google Docs link](https://docs.google.com/document/d/1AZO0BZwn1Aogj4f3PDNe1mhq8pKsXZxtrG--EIbP_-w/edit#)
 
 Link to hosted code: [https://the-shoppies-movie-search.netlify.app/](https://the-shoppies-movie-search.netlify.app/)
-# movie-search
