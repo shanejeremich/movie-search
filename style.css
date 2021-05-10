@@ -40,6 +40,11 @@ button {
   transition: opacity 300ms ease-in-out;
 }
 
+button:disabled {
+  cursor: not-allowed;
+  background: #ccc;
+}
+
 li {
   margin-top: 2em;
   display: flex;
