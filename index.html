@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <script src="https://kit.fontawesome.com/19ac4f6527.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>The Shoppies</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>The Shoppies</h1>
+      </header>
+      <div class="box-container">
+        <h3>Movie Title</h3>
+        <div class="search-container">
+          <div class="searchbar">
+            <label for="search-input" class="search-icon-wrapper">
+              <i class="fas fa-search"></i>
+            </label>
+            <input type="search" class="search-input" id="search-input" placeholder="Search Movie..." />
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-container flex">
+        <button type="submit" id="btn-submit">Submit</button>
+        <button id="btn-reset">Reset</button>
+      </div>
+
+      <div class="search-results" id="search-results">
+        <div class="box-container results" id="results-container">
+          <h3 id="results-text">Results</h3>
+          <ul class="movies" id="movies"></ul>
+        </div>
+
+        <div class="nominations">
+          <section class="box-container">
+            <header class="nominations-header" id="nominations-header"></header>
+            <span id="nominations-list">
+              <p>Search for movies. Nominate your top five favorite movies.</p>
+            </span>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script src="config/config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
