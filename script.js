@@ -8,7 +8,7 @@ const search = document.getElementById("search-input"),
   nominate = document.getElementById("btn-nominate"),
   nominationsHeader = document.getElementById("nominations-header"),
   baseURL = `https://www.omdbapi.com/`,
-  APIKEY = "1cb67337";
+  APIKEY = "6bd53730";
 
 let nominationsArr = [];
 
@@ -19,7 +19,7 @@ function searchMovie(e) {
   resultsText.innerHTML = `<h3>Results for "${term}"</h3>`;
   if (term.trim()) {
     try {
-      fetch(`${baseURL}?apikey=${APIKEY}&type=movie&s=${term}`)
+      fetch(`${baseURL}?apikey=${APIKEY}&s=${term}&type=movie`)
         .then(res => res.json())
         .then(data => {
           if (data.Error) {
