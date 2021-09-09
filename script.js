@@ -71,8 +71,6 @@ function nominateMovie(id, title, year, pic) {
   let num = nominationsArr.length;
   const found = nominationsArr.some(el => el.id === id);
   const nominateBtn = document.getElementById(id);
-  console.log(num);
-  console.log(nominationsArr);
 
   if (num < 5 && !found) {
     nominationsArr.push({
@@ -91,8 +89,6 @@ function nominateMovie(id, title, year, pic) {
 function loadNominations() {
   let num = nominationsArr.length;
 
-  console.log(num);
-
   if (num === 0) {
     nominationsList.innerHTML = `<p>Search for movies. Nominate your top five favorite movies.</p>`;
     nominationsHeader.innerHTML = `<h3>Nominations</h3>
@@ -102,7 +98,6 @@ function loadNominations() {
     nominationsHeader.innerHTML = `<h3>Nominations</h3>
     <p>${num}/5</p>`;
     nominationsArr.map(nomination => {
-      console.log(nomination);
       const movieLi = document.createElement("li");
       const movieDiv = document.createElement("div");
       movieDiv.className = "nominations-list";
