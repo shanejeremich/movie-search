@@ -26,7 +26,7 @@ This is a submission for the following challenge: [Google Docs link](https://doc
 
 ### Key Features
 
-- API call to omdbapi
+- API call to OMDBapi
 - Nominate up to five movies
 - Search through a free enormous database of movies from the API call
 - HTML / CSS / Javascript
