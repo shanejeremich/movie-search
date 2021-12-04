@@ -52,3 +52,5 @@ This is a submission for the following challenge: [Google Docs link](https://doc
 # Installation Instructions
 
 - Fork and clone the repo to install it as your own remote.
+- Set up your project/file architecture however you want
+- Start coding!
