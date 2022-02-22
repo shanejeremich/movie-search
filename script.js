@@ -7,6 +7,8 @@ const search = document.getElementById("search-input"),
   movies = document.getElementById("movies"),
   nominate = document.getElementById("btn-nominate"),
   nominationsHeader = document.getElementById("nominations-header"),
+  boxContainer = document.getElementById("box-container"),
+  finished = document.createElement("div"),
   baseURL = `https://www.omdbapi.com/`,
   APIKEY = "6bd53730";
 
@@ -77,7 +79,7 @@ function nominateMovie(id, title, year, pic) {
       id: id,
       title: title,
       year: year,
-      pic: pic
+      pic: pic,
     });
     nominateBtn.getElementsByTagName("button")[0].disabled = true;
   }
@@ -89,11 +91,12 @@ function nominateMovie(id, title, year, pic) {
 function loadNominations() {
   let num = nominationsArr.length;
 
-  if (num === 0) {
+  if (num <= 0) {
     nominationsList.innerHTML = `<p>Search for movies. Nominate your top five favorite movies.</p>`;
     nominationsHeader.innerHTML = `<h3>Nominations</h3>
     <p>${num}/5</p>`;
-  } else if (num > 0) {
+  }
+  if (num > 0) {
     nominationsList.innerHTML = "";
     nominationsHeader.innerHTML = `<h3>Nominations</h3>
     <p>${num}/5</p>`;
@@ -160,7 +163,12 @@ function handleReset() {
 }
 
 // Eventlisteners
-// search.addEventListener("search", searchMovie);
+search.addEventListener("keyup", e => {
+  if (e.keyCode === 13) {
+    e.preventDefault();
+    submitBtn.click();
+  }
+});
 search.addEventListener("search", handleSubmit);
 submitBtn.addEventListener("click", handleSubmit);
 resetBtn.addEventListener("click", clearSearchData);

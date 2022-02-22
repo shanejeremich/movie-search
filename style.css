@@ -1,33 +1,39 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
-
-* {
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+  line-height: calc(1rem + 0.5rrem);
 }
 
-html,
+html {
+  box-sizing: border-box;
+  font-size: 62.5;
+}
+
 body {
   color: #063814;
-  font-family: "Roboto", sans-serif;
+  font-family: sans-serif;
   background-color: #0c6e5e;
 }
 
 h1 {
   color: #fff;
-  font-size: 2em;
-  margin: 0.67em 0;
+  font-size: 2rem;
+  margin: 0.67rem 0;
 }
 
 h3 {
   font-weight: 100;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 .button,
 button {
-  /* text-align: center; */
-  height: 1.875em;
   display: inline-block;
-  /* padding: 0.875rem 2.1875rem; */
+  height: max-content;
+  padding: 1rem;
   background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
   background: linear-gradient(to right, #31d35c, #2bb7da);
   border: 0;
@@ -46,7 +52,7 @@ button:disabled {
 }
 
 li {
-  margin-top: 2em;
+  margin-top: 2rem;
   display: flex;
   justify-content: space-between;
 }
@@ -59,21 +65,22 @@ li {
   margin: 5rem auto;
   max-width: 1200px;
   background-color: #000000;
-  padding: 1em 1em 3em;
+  padding: 1rem 1rem 3rem;
 }
 
 .container h1 {
   margin: 1rem;
+  text-align: center;
 }
 
 .box-container {
   background-color: #fbf7ed;
-  padding: 1.25em;
-  margin: 1em;
+  padding: 1.25rem;
+  margin: 1rem;
 }
 
 .search-container {
-  height: 2.75em;
+  height: 2.75rem;
   margin: 0 auto;
 }
 
@@ -82,8 +89,8 @@ li {
   margin: 0 auto;
   max-width: 100%;
   box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
-  font-size: 1em;
-  height: 2.75em;
+  font-size: 1rem;
+  height: 2.75rem;
 }
 
 .search-input {
@@ -91,7 +98,7 @@ li {
   width: calc(100% - 80px);
   border-color: transparent;
   color: rgb(117, 117, 117);
-  font-size: 1em;
+  font-size: 1rem;
   margin: auto 0;
 }
 
@@ -104,7 +111,7 @@ li {
 }
 
 .search-icon-wrapper {
-  padding: 0 1.5em;
+  padding: 0 1.5rem;
 }
 
 .btn-container {
@@ -112,8 +119,20 @@ li {
 }
 
 .btn-container button {
-  margin: 0 0.9375em;
-  width: 6.25em;
+  margin: 0 0.9375rem;
+  width: 6.25rem;
+}
+
+.directions {
+  font-weight: 100;
+  padding: 1rem;
+  color: #fff;
+}
+
+.directions {
+  margin: 0;
+  text-align: center;
+  margin-top: 2rem;
 }
 
 .search-results {
@@ -134,8 +153,8 @@ li {
 }
 
 .poster {
-  height: 6.25em;
-  width: 4.6875em;
+  height: 6.25rem;
+  width: 4.6875rem;
   border-radius: 5px;
 }
 
@@ -149,17 +168,27 @@ li {
   margin: 0 25px;
 }
 
-@media (max-width: 50em) {
+.finished {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+@media only screen and (max-width: 50em) {
   .container {
-    padding: 1em 1em 3em;
+    padding: 1rem 1rem 3rem;
   }
 
   .box-container {
     width: 100%;
-    margin: 1em 0;
+    margin: 1rem 0;
   }
 
   .search-results {
     flex-direction: column;
+  }
+
+  .nominations {
+    width: 100%;
   }
 }
