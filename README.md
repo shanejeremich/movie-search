@@ -41,7 +41,7 @@ This is a submission for the following challenge: [Google Docs link](https://doc
 - Search through a free enormous database of movies from the API call
 - HTML / CSS / Javascript
 
-#### Front end deployed to `GitHub Pages`
+### Front end deployed to `GitHub Pages`
 
 > [Movie-Search](https://sjeremich23.github.io/movie-search/)
 
@@ -52,3 +52,5 @@ This is a submission for the following challenge: [Google Docs link](https://doc
 # Installation Instructions
 
 - Fork and clone the repo to install it as your own remote.
+- Set up your project/file architecture however you want
+- Start coding!
